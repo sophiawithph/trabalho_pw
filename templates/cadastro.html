@@ -1,5 +1,9 @@
+{% extends "inc/base.html "%}
+
+{% block conteudo %}
 <form method="post" action="cadastro.php">
     <div><input type="text" name="user" placeholder="Usuário"></div>
+ 
     <div><input type="password" name="pass" placeholder="Senha"></div>
 
     <div>
@@ -8,4 +12,4 @@
 
     <div><input type="submit" value="Gravar"></div>
 </form>
-
+{% endblock %}
