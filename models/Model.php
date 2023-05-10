@@ -6,7 +6,7 @@ class Model
 
     private $driver = 'mysql';
     private $host = 'localhost';
-    private $dbname = 'sistematwig';
+    private $dbname = 'trabpw';
     private $port = '3306';
     private $user = 'root';
     private $password = null;
