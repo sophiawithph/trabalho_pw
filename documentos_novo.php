@@ -3,12 +3,12 @@ require('twig_carregar.php');
 require('func/santize_filename.php');
 require('func/verifica_nome_arquivo.php');
 
-if( $_SERVER['REQUEST_METHOD']== 'POST' && !$_FILES['arquivo']['error']){
-    $arquivo = santize_filename($_FILES ['arquivo']['name']);
+if( $_SERVER['REQUEST_METHOD']== 'POST' && !$_FILES['arquivos']['error']){
+    $arquivos = santize_filename($_FILES ['arquivos']['name']);
 
-    $arquivo = verifica_nome_arquivo('uploads/', $arquivo);
+    $arquivos = verifica_nome_arquivo('uploads/', $arquivos);
 
-    move_uploaded_file($_FILES['arquivo']['tmp_name'],'uploads/'. $arquivo);
+    move_uploaded_file($_FILES['arquivos']['tmp_name'],'uploads/'. $arquivos);
 }
 
 
