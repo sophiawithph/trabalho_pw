@@ -5,3 +5,5 @@
 
     header('location:login.php');
     die;
+
+//<a href="logout.php">Sair</a>

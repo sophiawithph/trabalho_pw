@@ -2,12 +2,13 @@
     # novo_usuario_gravar.php
     require('models/Model.php');
     require('models/Usuario.php');
-
+    $name = $_POST['name'] ?? false; 
+    $email = $_POST ['email'] ?? false;
     $user = $_POST['user'] ?? false;
     $pass = $_POST['pass'] ?? false;
     $admin = isset($_POST['admin']);
 
-    if (!$user || !$pass) {
+    if ( !$email || !$name||!$user || !$pass ) {
         header('location:novo_usuario.php');
         die;
     }
@@ -16,6 +17,8 @@
 
   $usr= new Usuario();
   $usr->create([
+      'nome' => $name,
+      'email' => $email,
       'username' => $user,
       'senha'=> $pass,
       'admin'=> $admin,
