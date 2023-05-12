@@ -14,7 +14,6 @@ CREATE TABLE IF NOT EXISTS `trabpw`.`usuarios` (
   `email` VARCHAR(45) CHARACTER SET 'utf8' NOT NULL,
   `username` VARCHAR(255) CHARACTER SET 'utf8' NOT NULL,
   `senha` VARCHAR(255) CHARACTER SET 'utf8' NOT NULL,
-  `admin` TINYINT(4) NOT NULL,
   `ativo` TINYINT(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
