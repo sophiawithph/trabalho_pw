@@ -6,7 +6,7 @@
     $email = $_POST ['email'] ?? false;
     $user = $_POST['user'] ?? false;
     $pass = $_POST['pass'] ?? false;
-    $admin = isset($_POST['admin']);
+  
 
     if ( !$email || !$name||!$user || !$pass ) {
         header('location:novo_usuario.php');
@@ -21,7 +21,6 @@
       'email' => $email,
       'username' => $user,
       'senha'=> $pass,
-      'admin'=> $admin,
       'ativo'=> 1,
   ]);
 
