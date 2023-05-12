@@ -60,7 +60,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 START TRANSACTION;
 USE `trabpw`;
-INSERT INTO `trabpw`.`usuarios` (`id`, `nome`, `email`, `username`, `senha`, `admin`, `ativo`) VALUES (DEFAULT, 'sophia', 'sophia@gmail.com', 'sophia123', '$2y$10$Wkv7pbaBRpMYCUNd0UFUHuyBbm8d6/H4pGEQAId2CeS0MVJTuwotW', 1, 1);
+INSERT INTO `trabpw`.`usuarios` (`id`, `nome`, `email`, `username`, `senha`, `ativo`) VALUES (DEFAULT, 'sophia', 'sophia@gmail.com', 'sophia123', '$2y$10$Wkv7pbaBRpMYCUNd0UFUHuyBbm8d6/H4pGEQAId2CeS0MVJTuwotW', 1);
 
 COMMIT;
 
