@@ -30,7 +30,7 @@
 
         // Cria uma sessão para armazenar o usuário
         session_start();
-        $_SESSION['user'] = $user->nome;
+        $_SESSION['user'] = $user;
         
         // Redireciona o usuário
         header('location:boasvindas.php');
