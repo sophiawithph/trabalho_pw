@@ -11,6 +11,8 @@
     $doc = new Arquivo();
     $info = $doc->getById($id);
 
+ 
+
     echo $twig->render('arquivo_ver.html', [
         'arquivo' => $info,
     ]);

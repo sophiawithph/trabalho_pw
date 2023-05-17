@@ -8,7 +8,7 @@
     require('models/Arquivo.php');
 
     $doc = new Arquivo();
-    $arquivos = $doc->getAll(['id_usuario' =>1 ]);
+    $arquivos = $doc->getAll(['id_usuario' => $_SESSION ['user'] -> id ]);
 
     
     echo $twig->render('arquivos.html', [
