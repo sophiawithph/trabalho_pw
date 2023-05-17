@@ -19,8 +19,9 @@ if( $_SERVER['REQUEST_METHOD']== 'POST' && !$_FILES['arquivo']['error']){
       'id_usuario' => $_SESSION ['user'] -> id
   ]);
 }
-
-
+die;
 
 
 echo $twig->render('documentos_novo.html');
+
+

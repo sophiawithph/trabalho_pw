@@ -8,7 +8,7 @@
     $pass = $_POST['pass'] ?? false;
   
 
-    if ( !$email || !$name||!$user || !$pass ) {
+    if ( !$email || !$name || !$user || !$pass ) {
         header('location:novo_usuario.php');
         die;
     }

@@ -33,7 +33,7 @@
         $_SESSION['user'] = $user;
         
         // Redireciona o usuário
-        header('location:boasvindas.php');
+        header('location:arquivo.php');
         die;
     } else {
         var_dump("aaa");
