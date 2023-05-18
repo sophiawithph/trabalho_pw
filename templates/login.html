@@ -1,4 +1,5 @@
-<h1>Seja bem vindo!</h1>
+{% extends "inc/base.html" %}
+{% block conteudo %}
 <h2>Entre com seu login </h2>
 
 <form action="login_verifica.php" method="post">
@@ -16,3 +17,4 @@
 <h3>ou</h3>
 
 <a href="novo_usuario.php"><button>Faça seu cadastro</button></a>
+{% endblock %}
