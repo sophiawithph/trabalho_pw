@@ -18,23 +18,12 @@
         <div class="container mx-auto flex items-center">
 		    <div class="flex text-white font-extrabold">
 				<a class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="#"> 
-				🦥 <span class="hidden w-0 md:w-auto md:block pl-1">welcome to the mato</span>
+				🦥 <span class="hidden w-0 md:w-auto md:block pl-1">Welcome to the mato!</span>
 				</a>
             </div>
 			<div class="flex pl-4 text-sm">
 				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-				  <li class="mr-2">
-					<a class="inline-block py-2 px-2 text-white no-underline" href="arquivos.php">Meus documentos</a>
-				  </li>
-				  <li class="mr-2">
-					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="/usuarios">usuarios</a>
-				  </li>
-				  <li class="mr-2">
-					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="/documentos">documentos</a>
-				  </li>
-					<li class="mr-2">
-					<a class="inline-block text-gray-600 no-underline hover:text-gray-200 hover:text-underline py-2 px-2" href="boas_vindas.php">boas vindas</a>
-				  </li>
+				  
 				</ul>
 			</div>
         </div>
@@ -48,7 +37,7 @@
 						Seja Bem Vindo!
 					</p>
 
-					<p class="text-xl md:text-2xl text-gray-500"> {{ user }}✌️</p>
+					<p class="text-xl md:text-2xl text-gray-500"> {{ user }}</p>
 
 
 
@@ -129,8 +118,11 @@
 	
 
 	</div>
+	
+		<div class="max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+	<a href="logout.php"><button type="button" class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-900 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 transition-all text-sm dark:bg-gray-900 dark:hover:bg-gray-900 dark:focus:ring-offset-gray-900">Sair</button></a>
+</div>
 
-	<a href="logout.php"><button type="button" class="rounded-lg border border-gray-700 bg-gray-700 px-3 py-1.5 text-center text-xs font-medium text-white shadow-sm transition-all hover:border-gray-700 hover:bg-gray-700 focus:ring focus:ring-gray-200 disabled:cursor-not-allowed disabled:border-gray-300 disabled:bg-gray-300">Sair</button></a>
 
 	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
 	<script src="https://unpkg.com/tippy.js@4"></script>
