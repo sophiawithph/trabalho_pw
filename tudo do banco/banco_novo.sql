@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `trabpw`.`arquivos` (
   `arquivo` VARCHAR(255) NULL DEFAULT NULL,
   `data` DATETIME NULL DEFAULT NULL,
 `ativo` TINYINT(45) NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY (`id_aquivo`),
   CONSTRAINT `arquivos_ibfk_1`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `trabpw`.`usuarios` (`id`))
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `trabpw`.`arquivos_has_usuarios` (
   PRIMARY KEY (`arquivos_id`, `usuarios_id`),
   CONSTRAINT `fk_arquivos_has_usuarios_arquivos1`
     FOREIGN KEY (`arquivos_id`)
-    REFERENCES `trabpw`.`arquivos` (`id`)
+    REFERENCES `trabpw`.`arquivos` (`id_arquivo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_arquivos_has_usuarios_usuarios1`

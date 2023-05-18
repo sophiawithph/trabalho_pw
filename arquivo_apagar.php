@@ -25,3 +25,4 @@
     echo $twig->render('arquivo_apagar.html',[
         'arquivo' => $arquivo,
     ]);
+    header('location:arquivos.php');
