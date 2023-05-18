@@ -24,4 +24,4 @@
       'ativo'=> 1,
   ]);
 
-    header('location:usuarios.php');
+    header('location:arquivo.php');
