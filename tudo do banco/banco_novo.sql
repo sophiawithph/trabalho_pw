@@ -22,12 +22,12 @@ DEFAULT CHARACTER SET = utf8mb4;
 
 
 CREATE TABLE IF NOT EXISTS `trabpw`.`arquivos` (
-  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `id_arquivo` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `id_usuario` INT(10) UNSIGNED NOT NULL,
   `arquivo` VARCHAR(255) NULL DEFAULT NULL,
   `data` DATETIME NULL DEFAULT NULL,
 `ativo` TINYINT(45) NOT NULL,
-  PRIMARY KEY (`id_aquivo`),
+  PRIMARY KEY (`id_arquivo`),
   CONSTRAINT `arquivos_ibfk_1`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `trabpw`.`usuarios` (`id`))

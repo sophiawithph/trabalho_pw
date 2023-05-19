@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Documentos</title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/> <!--Replace with your tailwind.css once created-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" rel="stylesheet">
+		
+</head>
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+	<nav class="bg-gray-900 p-4 mt-0 w-full">
+        <div class="container mx-auto flex items-center">
+		    <div class="flex text-white font-extrabold">
+				<a class="flex text-white text-base no-underline hover:text-white hover:no-underline" href="#"> 
+				🦥 <span class="hidden w-0 md:w-auto md:block pl-1">Welcome to the mato!</span>
+				</a>
+            </div>
+			<div class="flex pl-4 text-sm">
+				<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+					<form method = "post" action="buscar.php">
+					Pesquisar:<input type="text" name="pesquisar" placeholder="PESQUISAR">
+					<input type="submit" value="ENVIAR">
+				</form>
+				</ul>
+			</div>
+        </div>
+	</nav>
+
+	<!--Header-->
+	<div class="w-full m-0 p-0 bg-cover bg-bottom" style="height: 60vh; max-height: 450px;">
+			<div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+				<!--Title-->
+					<p class="text-black font-extrabold text-3xl md:text-5xl">
+						Seja Bem Vindo!
+					</p>
+
+					<p class="text-xl md:text-2xl text-gray-500"> {{ user }}</p>
+
+
+
+					<hr class="mx-auto my-8 h-1 w-60 border-0 bg-gray-300" />
+
+		
+			</div>
+			
+		</div>
+		<!--Container-->
+		<div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
+			
+			<div class="mx-0 sm:mx-6">
+				
+				<!--Nav-->
+				<nav class="mt-0 w-full">
+					<div class="container mx-auto flex items-center">
+						
+						<div class="flex w-1/2 pl-4 text-sm">
+							<ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+								<li class="mr-2">
+									<a class="inline-block text-black-600 no-underline hover:text-gray-400 hover:underline py-2 px-2" href= 'arquivo.php'>MEUS DOCS</a>
+									
+								</li>
+								<li class="mr-2">
+								<a class="inline-block text-black-600 no-underline hover:text-gray-400 hover:underline py-2 px-2" href="documentos.php">COMPARTILHAR DOCS</a>
+								</li>
+							</ul>
+						</div>
+
+
+						<div class="flex w-1/2 justify-end content-center">		
+							
+						</div>
+
+					</div>
+				</nav>
+
+				<div class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+					
+				
+			
+						
+
+						<div class="w-full flex flex-col flex-grow flex-shrink">
+							<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+								
+								{% block conteudo %}
+								{% endblock %}
+							</div>
+
+						
+							
+							</div>
+						</div>
+
+					</a>
+				</div>
+				<!--/Lead Card-->
+
+
+				
+<br>
+
+
+					
+					</div>
+
+					
+			</div>
+			
+			
+			
+	
+				
+			
+		</div>
+	
+
+	</div>
+	
+		<div class="max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+	<a href="logout.php"><button type="button" class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-900 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-700 focus:ring-offset-2 transition-all text-sm dark:bg-gray-900 dark:hover:bg-gray-900 dark:focus:ring-offset-gray-900">Sair</button></a>
+</div>
+
+
+	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+	<script src="https://unpkg.com/tippy.js@4"></script>
+	<script>
+		//Init tooltips
+		tippy('.avatar')
+	</script>
+</body>
+</html>

@@ -9,7 +9,7 @@ require('pdo.inc.php');
 $pesquisar = $_POST['pesquisar'];
 $sql = $pdo->prepare('SELECT * FROM arquivos WHERE nome LIKE '%$pesquisar%'');
 
-$sql->execute([$pesquisa]);
+$sql->execute([$pesquisar]);
 $arquivo = $sql->fetch(PDO::FETCH_ASSOC);
 
 
