@@ -31,12 +31,13 @@
         // Cria uma sessão para armazenar o usuário
         session_start();
         $_SESSION['user'] = $user;
+
+      
         
         // Redireciona o usuário
         header('location:arquivo.php');
         die;
     } else {
-        var_dump("aaa");
         // Falha no login
         header('location:login.php?erro=1');
         die;

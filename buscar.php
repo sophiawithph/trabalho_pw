@@ -7,13 +7,19 @@ require('func/verifica_nome_arquivo.php');
 require('pdo.inc.php');
 
 $pesquisar = $_POST['pesquisar'];
-$sql = $pdo->prepare('SELECT * FROM arquivos WHERE nome LIKE '%$pesquisar%'');
+$resultado = $pdo->prepare('SELECT * FROM arquivos WHERE nome LIKE :find');
 
-$sql->execute([$pesquisar]);
-$arquivo = $sql->fetch(PDO::FETCH_ASSOC);
+$sql->bindParam(':find', $pesquisar);
+
+  
+    $sql->execute();
 
 
-echo $resultado;
+$resultado->execute([$pesquisar]);
+// $arquivo = $sql->fetch(PDO::FETCH_ASSOC);
+
+
+
 
 
 ?>

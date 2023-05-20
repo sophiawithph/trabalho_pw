@@ -8,21 +8,21 @@
         
         $id = $_POST['id'] ?? false;
         if ($id) {
-            $sql = $pdo->prepare('UPDATE arquivos SET ativo = 0 WHERE id = ?');
+            $sql = $pdo->prepare('UPDATE arquivos SET ativo = 0 WHERE id_arquivo = ?');
             $sql->execute([$id]);
         }
-        header('location:arquivos.php');
+        header('location:arquivo.php');
         die;
     }
 
 
     $id = $_GET['id'] ?? false;
-    $sql = $pdo->prepare('DELETE FROM arquivos WHERE id = ?');
-    // $sql = $pdo->prepare('SELECT * FROM arquivos WHERE ativo = 1');
+    $sql = $pdo->prepare('DELETE * FROM arquivos WHERE ativo = 0');
+    
     $sql->execute([$id]);
     $arquivo = $sql->fetch(PDO::FETCH_ASSOC);
 
     echo $twig->render('arquivo_apagar.html',[
         'arquivo' => $arquivo,
     ]);
-    header('location:arquivos.php');
+    header('location:arquivo.php');
