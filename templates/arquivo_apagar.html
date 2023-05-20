@@ -1,0 +1,17 @@
+{% extends 'inc/base.html' %}
+
+{% block conteudo %}
+<h1>Apagar usuário</h1>
+
+<p>Tem certeza de que quer fazer isso?</p>
+
+
+<p><strong>Você está prestes a apagar o coitado do {{ arquivo.arquivo }}</strong></p>
+
+<form action="#" method="post">
+    <input type="hidden" name="id" value="{{ arquivo.id }}">
+    <input type="submit" value="Apagar">
+</form>
+
+<div><a href="arquivo.php">Cancelar</a></div>
+{% endblock %}

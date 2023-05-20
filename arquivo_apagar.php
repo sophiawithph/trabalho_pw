@@ -17,7 +17,7 @@
 
 
     $id = $_GET['id'] ?? false;
-    $sql = $pdo->prepare('DELETE * FROM arquivos WHERE ativo = 0');
+    $sql = $pdo->prepare('DELETE FROM arquivos WHERE id_arquivo = ?');
     
     $sql->execute([$id]);
     $arquivo = $sql->fetch(PDO::FETCH_ASSOC);
