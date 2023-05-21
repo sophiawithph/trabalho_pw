@@ -21,7 +21,6 @@
     
     $sql->execute([$id]);
     $arquivo = $sql->fetch(PDO::FETCH_ASSOC);
-
     echo $twig->render('arquivo_apagar.html',[
         'arquivo' => $arquivo,
     ]);

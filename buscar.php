@@ -6,18 +6,19 @@ require('func/santize_filename.php');
 require('func/verifica_nome_arquivo.php');
 require('pdo.inc.php');
 
-$pesquisar = $_POST['pesquisar'];
-$resultado = $pdo->prepare('SELECT * FROM arquivos WHERE nome LIKE :find');
+error_reporting(0);
 
-$sql->bindParam(':find', $pesquisar);
+$pesquisar ='%'.$_POST['pesquisar'].'%';
+$sql = $pdo->prepare('SELECT arquivo FROM arquivos WHERE arquivo LIKE ?');
 
-  
-    $sql->execute();
+$sql->execute([$pesquisar]);
 
+$busca = $sql->fetch(PDO::FETCH_ASSOC);
 
-$resultado->execute([$pesquisar]);
-// $arquivo = $sql->fetch(PDO::FETCH_ASSOC);
-
+echo $twig->render('busca.html',[
+    'busca' => $busca,
+]);
+header('location:busca.html');
 
 
 

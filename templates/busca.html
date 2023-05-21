@@ -1,0 +1,31 @@
+{% extends "inc/base.html" %}
+{% block conteudo %}
+
+   
+
+        <table class="my-5 w-full border-collapse border border-gray-200 bg-white text-left text-sm text-gray-500">
+
+        <thead class="bg-gray-50">
+            <tr>
+                <th class="px-6 py-4 font-medium text-gray-900">Resultados</th>
+                <th class="px-6 py-4 font-medium text-gray-900">Link</th>
+            </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+        {% for busca in busca %}
+        
+        <!-- Linha para repetir -->
+        <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 font-medium text-gray-900"><a href="">{{ busca }}</a></td>
+        </tr>
+
+        <!-- / Linha para repetir -->
+        {% else %}
+        <tr>
+            <td colspan="2">Nenhum arquivo encontrado</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+{% endblock %}
