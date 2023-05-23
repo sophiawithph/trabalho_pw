@@ -20,8 +20,6 @@ if( $_SERVER['REQUEST_METHOD']== 'POST' && !$_FILES['arquivo']['error']){
   ]);
 }
 
-
-
 echo $twig->render('documentos_novo.html');
 
 

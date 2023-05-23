@@ -3,7 +3,7 @@
     require('twig_carregar.php');
     require('pdo.inc.php'); 
 
-   
+    error_reporting(0);
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         $id = $_POST['id'] ?? false;
